@@ -1,0 +1,597 @@
+.khung img {
+    width: 100%; 
+    height: 100%;
+    transition-duration: 0.5s;
+        /* Safari & Google Chrome */
+        -webkit-transition-duration: 0.5s; 
+        /* Mozilla Firefox */
+        -moz-transition-duration: 0.5s; 
+        /* Opera */
+        -o-transition-duration: 0.5s;
+        /* IE 9 */
+        -ms-transition-duration: 0.5s;
+}
+         
+/* Hover chuột vào thumbnail */
+.khung img:hover {
+    transform: scale(1.2);
+        /* Safari & Google Chrome */
+        -webkit-transform: scale(1.2);
+        /* Mozilla Firefox */
+        -moz-transform: scale(1.2); 
+        /* Opera */
+        -o-transform: scale(1.2);
+        /* IE 9 */
+        -ms-transform: scale(1.2);
+    cursor: pointer; 
+}
+
+.khung{
+  position: relative;
+		width: 23%;
+		height:350px;
+		border: solid 2px #000000;
+		float: left;
+    text-align: center;
+    overflow: hidden; 
+    margin: 20px 0.8%;
+		
+  }
+  .phandau{
+    height: 100px;
+    position: relative;
+    background-color:#353535;
+    width: 100%;
+    top: 0;
+
+}
+.phandau img{
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    top:20px;
+    left: 50px;
+    border-radius:50px;
+
+}
+.phandau p{
+  
+  font-size: 17px;
+  color: whitesmoke;
+  float: left;
+  margin-left: 130px;
+  margin-top: 40px;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  
+ 
+}
+.phancuoi {
+     background-color:#353535;
+   
+    width: 100%;
+}
+
+.phancuoi li {
+    list-style: none;
+    line-height: 30px;
+    font-size:15px;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 30px;
+    color:white;
+}
+.phancuoi li:hover{
+    color: rgb(255, 202, 68);;
+}
+.noidungfooter {
+
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.social-icon li {
+    display: inline-block;
+    font-size: 250%;
+    margin-top: -2%;
+    margin-bottom: 1%;
+    border: none;
+   
+}
+.social-icon li a{
+  color: #59c3f5;
+  margin-left: 5px;
+}
+
+.social-icon li i {
+    transition: all .1s;
+    cursor: pointer;
+    border: none;
+    
+}
+
+.social-icon li :hover .social-icon li :active {
+    transform: scale(1.3);
+
+}
+
+.information .small-icon :hover,
+.information .small-icon :active {
+    transform: scale(1.3);
+
+}
+
+
+.information{
+    width: 100%;
+    
+}
+h2{
+    text-align: center;
+    margin: 50px; 
+    color: rgb(245, 32, 32);
+}
+.khung2{
+    
+    margin-left: 11%;
+	text-align: center;
+}
+	.trang{
+		width: 20px;
+		height:20px;
+		border: solid 2px #000000;
+		display: inline-table;
+		margin-left: 5px;
+		text-align: center;
+	}
+	.trang:hover{
+		background: #04ADF9;
+	}
+	.content{
+		width: 80%;
+    margin: 50px 10%;
+	}
+	.taskbar {
+  	list-style-type: none;
+  	overflow: hidden;
+		background-color: #ffca44;
+		height: 40px;
+		margin: 0px;
+    text-align: center;
+    width: 100%;
+    
+    
+	}
+	.taskbar li {
+    margin-top: -3px;
+		display: inline-table;
+		text-align: center;
+		font-size: 17px;
+    line-height: 50px;
+    text-decoration: none;
+    margin-left: 140px;
+   
+  }
+  .taskbar :hover{
+    background-color: white;
+  }
+  .trangchu{
+    width: 10%;
+    float: left;
+    
+  }
+  .Doge{
+    width: 10%;
+    float: left;
+  }
+  .Cate{
+    width: 10%;
+    float: left;
+  }
+  .chungtoi{
+    width: 10%;
+    float: left;
+
+  }
+
+	.taskbar li a {
+		text-decoration: none;
+		color: black;
+	}	
+	
+	.select{
+		display: none;
+		width: 60%;
+		height: 100px;
+		background: #f9ffff;
+		margin-left:380px;
+		position: absolute;
+	}
+	.select div{
+		float:left;
+		width: 20%;
+		height: 30px;
+	}
+	.congcu li {
+		display: inline-table;
+		font-size: 16px;
+    margin: 3px;
+    float: left;
+    margin-left: 50px;
+    border-bottom: 1px solid whitesmoke;
+    font-family: sans-serif;
+    word-spacing: 1px;
+	}
+	
+	.congcu {
+		position: absolute;
+		top: 30px;
+		right: 3%;
+	}
+	.congcu a{
+			text-decoration: none;
+			color:white;
+	}
+	.congcu a:hover{
+		color: rgb(255, 202, 68);;
+		font-size: 19px;
+		text-decoration: none;
+	}
+.mySlides {display: none;}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  margin: auto;
+}
+.slideshow-container img{
+	height: 500px;
+	width: 100%;
+}
+.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	padding: 16px;
+	margin-top: -22px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+	background-color: rgba(0,0,0,0.8);
+  }
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.5s;
+	animation-name: fade;
+	animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+	from {opacity: .4} 
+	to {opacity: 1}
+  }
+  
+  @keyframes fade {
+	from {opacity: .4} 
+	to {opacity: 1}
+  }
+  
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+	.prev, .next,.text {font-size: 11px}
+  }
+  #login1 {
+    height: 450px;
+    width: 470px;
+    border: solid 2px;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    left: 33%;
+    top: 100px;
+    display: none;
+    animation: bangdangky;
+    animation-duration: 1s;
+    background-color:white;
+}
+
+#login2 {
+    height: 350px;
+    width: 300px;
+    border: solid 2px;
+    border-radius: 10px;
+    text-align: center;
+    position: absolute;
+    left: 40%;
+    top: 150px;
+    display: none;
+    animation: bangdangky1;
+    animation-duration: 1s;
+}
+
+    #login2 input {
+        border: solid 2px;
+        border-radius: 10px;
+        width: 200px;
+        height: 40px;
+        margin: 15px;
+    }
+
+        #login2 input[type=submit] {
+            border: solid 2px;
+            border-radius: 10px;
+            width: 220px;
+            height: 50px;
+            margin: 15px
+        }
+
+            #login2 input[type=submit]:hover {
+                font-size: 20px;
+                background-color: greenyellow
+            }
+
+#header {
+    height: 10%;
+    text-align: center;
+    border: solid 2px;
+    margin-bottom: 1px;
+}
+@keyframes bangdangky {
+    from {
+        top: -300px;
+        box-shadow: 50px 50px 50px;
+    }
+
+    to {
+        top: 100px;
+    }
+}
+
+@keyframes bangdangky1 {
+    from {
+        top: -300px;
+        box-shadow: 50px 50px 50px;
+    }
+
+    to {
+        top: 150px;
+    }
+}
+
+#footer {
+    height: 10%;
+    border: solid 2px;
+    padding: 8px;
+    text-align: center;
+}
+
+    #footer input:hover {
+        background-color: chartreuse;
+        border: solid 2px;
+        font-size: 16px
+    }
+
+    #footer input {
+        border: solid 2px;
+    }
+
+.left {
+    float: left;
+    width: 30%;
+}
+
+.timkiem {
+    position: absolute;
+    top: 50px;
+    left: 30%;
+}
+
+.right {
+    float: right;
+    width: 70%;
+}
+
+.left p {
+    margin: 0px;
+    border: solid 2px;
+    padding: 7px;
+    margin-bottom: 1px;
+}
+
+
+.d {
+    margin: 0px;
+    border: solid 2px;
+    padding: 5.25px;
+    margin-bottom: 1px;
+    margin-left: 1px;
+}
+.tensanpham{
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  color: #f9ffff;
+}
+.tengia{
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+}
+.khung input{
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+.copyright {
+    text-align: center;
+    background-color: rgb(255, 202, 68);
+    color: black;
+    padding: 20px;
+    width: 100%;
+    font-size: 15px;
+    word-spacing: 2px;
+    letter-spacing: 2px;
+}
+#chungtoi{
+  width: 90%;
+  height: 120%;
+  background-color: antiquewhite;
+  margin-top: -70px;
+  margin-left: 20px;
+  display: none;
+  border: 1px solid black;
+ z-index: 1;
+  position: absolute;
+  animation: bangchungtoi;
+    animation-duration: 2.5s;
+    top:220px;
+
+  
+}
+@keyframes bangchungtoi{ 
+  from{
+      top:-800px;
+     
+  }
+  to{
+      top: 220px;
+  }  
+}
+#chungtoi p{
+  
+  margin-left: 1%;
+  font-size: 15px;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  line-height: 17px;
+ font-family: 'Times New Roman', Times, serif;
+}
+body{
+  width:100%; 
+  overflow-x: hidden;
+  margin: 0;
+  margin-top: -15px;
+}
+
+#khung-chitietsanpham{
+  width: 50%;
+  height: 75%;
+  background-color: rgb(224, 200, 154);
+  margin-top: -1000px;
+  position: absolute;
+  z-index: 1;
+  margin-left: 26%;
+  border-radius: 5px;
+  display: block;
+}
+.khungbentrai
+{
+  width:5% ;
+  float: left;
+}
+.khungbenphai
+{
+  width: 45%;
+  float: right;
+  line-height:100px;
+  font-size: 17px;
+
+}
+.khungbenphai input
+{
+  border-radius: 5px;
+  margin-left: 3px;
+  font-style: italic;
+}
+.khungbentrai input
+{
+  margin-left: 125px;
+  margin-top: 20px;
+  width: 200%;
+  height: 100%;
+  
+}
+
+.khunghinh-chitietsanpham
+{
+  width: 270px;
+  height: 370px;
+  margin-top: 30px;
+  margin-left: 20px;
+  border: 2px solid black;
+  
+}
+#khung-chitietsanpham button{
+  margin-left: 610px;
+  margin-top: 5px;
+}
+#trang12561{
+	background:#04ADF9;
+}
+#trang125681{
+	background:#04ADF9;
+}
+.hinhne{
+	margin-top:15px;
+	margin-left: 15px;
+	height: 450px;
+    width: 300px;
+}
+.searchthoi{
+	border-radius: 10px;
+}
+.searchthoi:hover{
+	background:#04ADF9;
+}
+#trang125691{
+  background:#04ADF9;
+}

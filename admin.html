@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <script src="javascript/admin.js"></script>
+    <link rel="stylesheet" href="index.html">
+    <title>ADMIN</title>
+</head>
+<body>
+<div class="ngoai" >
+    <div class="left">
+        <div class="footer-phandau">
+            <ul>
+                <div id="menuadmin">
+                    <div id="adminuser">
+                        <a href="index.html" >
+                            <p> TRANG CHỦ </p>
+                        </a>         
+                    </div>
+                    <div id="adminproduct">
+                        <button onclick="hienalltaikhoan();"><strong>TÀI KHOẢN</strong></button>
+                    </div>
+                    <div id="admindonhang">
+                        <button onClick="hienallsanpham();" ><strong> SẢN PHẨM </strong></button>
+                    </div>
+                    <div id="adminproduct">
+                        <button onclick="mothemsanpham();"><strong> THÊM SẢN PHẨM </strong></button>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </div>
+    <div class="right" >
+        <div class="logo-shop">
+            <a href="admin.html" href="img/logo.jpg"></a>
+        </div>
+        
+			<div id="right-top-left">
+				<nav>
+					<a href="" style="font-size: 18px; color: #000000; margin-left: 30px;"><i class="fab fa-facebook-square"></i></a>
+					<a href="" style="font-size: 18px; color: #000000; margin-left: 10px;"><i class="fab fa-twitter"></i></a>
+					<a href="" style="font-size: 18px; color: #000000; margin-left: 10px;"><i class="fab fa-youtube"></i></a>
+				</nav>
+			</div>
+			<div id="right-top-right">
+				<nav>
+					<a href="tel:0393981372" style="font-size: 18px; color: #000000; margin-left: 30px;line-height: 45px;"><i class="fas fa-phone">0393981372</i></a>
+				</nav>
+            </div>
+            <div class="admin-taikhoan" id="admin-taikhoan" style="display: none">
+                <div >
+                     <button type="button" onclick="dongtaikhoan()" style="width: 30px;border-radius: 7px;margin-left: 96.5%;margin-top: 5px;">X</button>
+                </div>
+                <ul class="admin-hovaten" id="admin-hovaten">
+                </ul>
+                <ul class="admin-tendangnhap" id="admin-tendangnhap">
+                </ul>
+                <ul class="admin-matkhau" id="admin-matkhau">
+
+                </ul>
+                <ul class="admin-sanpham" id="admin-sanpham">
+                 
+                </ul>
+                <ul class="admin-buttonxoa" id="admin-buttonxoataikhoan">
+                   
+                </ul>
+                <ul class="admin-blockacc" id="admin-blockacc"><p><label class="switch">
+					
+                </ul>
+            </div>
+		 <div class="admin-trangsanpham" id="admin-trangsanpham" style="display: none">
+                <div>
+                    <button type="button" onclick="dongsanpham()"
+                        style="width: 30px;border-radius: 7px;margin-left: 96.5%;margin-top: 5px;display: block;">X</button>
+                </div>
+                <ul class="admin-masanpham" id="admin-masanpham">
+                </ul>
+
+                <ul class="admin-tensanpham" id="admin-tensanpham">
+                </ul>
+
+                <ul class="admin-gia" id="admin-gia">
+                </ul>	
+
+
+                <ul class="admin-buttonxoa" id="admin-buttonxoasanpham">
+                </ul>
+			 	<ul class="admin-buttonxoa" id="admin-buttonsuasanpham">
+                </ul>
+			 	<div id="divngoaithaydoi" class="suthaydoi">
+					<div class="suasanpham" id="suasanpham">
+						<button type="button" onClick="dongsuasanpham();" style="width: 30px;border-radius: 7px;margin-left: 93.5%;margin-top: 5px;">X</button>
+						<div style="width:100%;text-align: center">Khung sản phẩm được sửa</div>
+						<div style="margin-top: 5px;margin-left: 15px;">Mã sản phẩm</div>
+						<input type="text" readonly id="suamasanpham" style="margin-left: 15px;width:20%"/>
+						<div style="margin-top: 5px;margin-left: 15px;">Tên sản phẩm</div>
+						<input type="text" id="suatensanpham" style="margin-left: 15px;width:30%"/>
+						<select id="sualoaimuonthem"><option value="dog">Chó</option><option value="cat">Mèo</option></select>
+						<div style="margin-top: 5px;margin-left: 15px;">Giá</div>
+						<input type="number" id="suagiasanpham" style="margin-left: 15px;width:20%"/>
+						<div style="margin-top: 5px;margin-left: 15px;">Hình ảnh</div>
+						<input type="file" id="hinhmuonsua" style="margin-left: 15px;">
+						<br><div style="width: 100%;text-align: center"><button onClick="thaydoisanpham();" style="margin-top: 15px;">Thay đổi</button></div>
+					</div>
+				</div>
+            </div>
+		<div class="addproduct" id="addproduct" style="display: none;">
+			<div>
+               <button type="button" onclick="dongthemsanpham()" style="width: 30px;border-radius: 7px;margin-left: 96.5%;margin-top: 5px;display: block;">X</button>
+            </div>
+			<p style="font-size: 30px;margin-left: 10px;">Thêm sản phẩm</p>
+			<p><strong> ID sản phẩm</strong></p>
+			<input type="text" id="idsanphamthem">
+			<p> <strong>Tên sản phẩm</strong></p>
+			<input type="text" id="tensanphamthem">
+			<o> <strong>Loại sản phẩm</strong></o>
+			<select id="loaimuonthem"><option value="dog">Chó</option><option value="cat">Mèo</option></select>
+			<p><strong>Giá</strong></p>
+			<input type="number" id="giasanphamthem">
+			<p><strong>Hình ảnh<strong</p>
+			<input type="file" id="hinhmuonthem">
+			<p><button onClick="nhapsanpham();">Thêm</button></p>
+		</div>
+    </div>
+</div>
+    
+</body>
+</html>

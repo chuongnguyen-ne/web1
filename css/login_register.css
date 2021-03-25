@@ -1,0 +1,259 @@
+@charset "utf-8";
+#register{
+    width: 430px;
+    height: 70%;
+    margin-top: 80px;
+    left: 35%;
+    display:none;
+    position: absolute;
+    right: 4%;
+    animation: bangdangky;
+    animation-duration: 2.5s;
+    top:17px;
+	z-index: 1;
+}
+.dangky-bentrai{
+    float: left;
+    width: 40%;
+}
+
+.dangky-benphai {
+    float: right;
+    width: 60%;
+  margin-top: 10px;
+}
+
+#dangky-mid {
+    height: 80%;
+    position: absolute;
+
+}
+.dangky-bentrai p{
+    line-height: 51px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.khungdangky input[type=text],input[type=password], input[type=submit]{
+    width: 90%;
+    height: 10%;
+    margin-bottom: 30px;
+    margin-top: 22px;
+    margin-left: 15px;
+}
+
+
+#dangky-footer {
+    height: 10%;
+    border-radius: 10px;
+    margin-top: 70%;
+    margin-left: 60%;
+    text-align: center;
+  
+}
+#dangky-header {
+    height: 7%;
+    margin-top: 5px;
+    margin-left: 10px;
+    width: 60%;
+    
+}
+#dangky-header button[type=button]{
+    margin-left: 140%;
+    margin-top: -10%;
+    
+  
+}
+h4{
+    margin-left: 20px;
+    margin-top: 5px;
+}
+.khungdangky{
+    border-radius: black solid 2px;
+    margin-left: 40px;
+    width: 100%;
+}
+#dangky-header button[type=button] {
+    border: solid 2px;
+    margin-left: 145%;
+}
+#dangky-header p{
+    margin-top: -7%;
+    border-bottom: 1px solid black;
+}
+#dangky-footer button[type=submit] {
+    border: solid 0.5px;
+    font-style:inherit;
+   
+}
+#dangky-header button:hover {
+        font-size: 15px;
+        background-color: yellowgreen;
+        border: solid 1px;
+        box-shadow: 5px 5px 5px 0.4px;
+       
+    }
+.khungdangky li:hover{
+        background-color:palevioletred;
+        border-radius:5px;
+        border:1px solid;
+        font-size:20px;
+    }
+.khungdangky li{
+        display: inline-table;
+        border-radius:5px;
+        border:solid 1px;
+        font-size:20px;
+        margin:3px;
+}
+#dangky-footer input[type=submit]{
+    width: 80px;
+    height: 30px;
+    font-size: 15px;
+}
+
+#dangky-footer input[type=submit]:hover,
+#dangky-footer input[type=submit]:active{
+    background-color: yellowgreen;
+    box-shadow: 2px 2px 2px 0.1px;
+}
+@keyframes bangdangky{ 
+    from{
+        top:-800px;
+       
+    }
+    to{
+        top: 17px;
+    }  
+}
+
+
+
+#login{
+    width: 430px;
+    height: 43%;
+    margin-top: 80px;
+    left: 35%;
+    display:none;
+    position: absolute;
+    right: 4%;
+    animation: bangdangky;
+    animation-duration: 2.5s;
+    top:17px;
+    z-index: 1;
+
+}
+.dangnhap-bentrai{
+    float: left;
+    width: 50%;
+}
+
+.dangnhap-benphai {
+    float: right;
+    width: 50%;
+  margin-top: 20px;
+}
+
+#dangnhap-mid {
+    height: 90%;
+    position: absolute;
+
+}
+.dangnhap-bentrai p{
+    line-height: 51px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.khungdangnhap input[type=text],input[type=password],input[type=email]{
+    width: 90%;
+    height: 10%;
+    margin-bottom: 30px;
+    margin-top: 22px;
+    margin-left: 15px;
+}
+
+
+#dangnhap-footer {
+    height: 10%;
+    border-radius: 10px;
+    margin-top: 35%;
+    margin-left: 60%;
+    text-align: center;
+  
+}
+#dangnhap-header {
+    height: 7%;
+    margin-top: 5px;
+    margin-left: 10px;
+    width: 40%;
+    
+}
+#dangnhap-header button[type=button]{
+    margin-left: 220%;
+   
+}
+#dangnhap-header p{
+    margin-top: -10%;
+    border-bottom: 1px solid black;
+}
+h4{
+    margin-left: 20px;
+    margin-top: 5px;
+}
+.khungdangnhap{
+    border-radius: black solid 2px;
+    margin-left: 30px;
+    width: 120%;
+}
+#dangnhap-header button {
+    border: solid 2px;
+    width: 40%;
+}
+
+#dangnhap-footer button[type=submit] {
+    border: solid 0.5px;
+    font-style:inherit;
+   
+}
+#dangnhap-header button:hover {
+        font-size: 15px;
+        background-color: yellowgreen;
+        border: solid 1px;
+        box-shadow: 5px 5px 5px 0.4px;
+       
+    }
+.khungdangnhap li:hover{
+        background-color:palevioletred;
+        border-radius:5px;
+        border:1px solid;
+        font-size:20px;
+    }
+.khungdangnhap li{
+        display: inline-table;
+        border-radius:5px;
+        border:solid 1px;
+        font-size:20px;
+        margin:3px;
+}
+#dangnhap-footer input[type=submit]{
+    
+    height: 30px;
+    font-size: 15px;
+}
+
+#dangnhap-footer input[type=submit]:hover,
+#dangnhap-footer input[type=submit]:active{
+    background-color: yellowgreen;
+    box-shadow: 2px 2px 2px 0.1px;
+}
+@keyframes bangdangnhap{ 
+    from{
+        top:-800px;
+       
+    }
+    to{
+        top: 17px;
+    }  
+}
+

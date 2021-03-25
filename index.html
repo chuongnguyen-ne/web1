@@ -1,0 +1,326 @@
+<!doctype html>
+<html>
+<head>
+<script src="javascript/san_pham.js"></script> 
+<script src="javascript/project.js"></script> 
+<script src="javascript/giohang.js"></script>
+<link rel="stylesheet" href="css/content.css" />
+<link rel="stylesheet" href="css/giohang.css" />
+<link rel="stylesheet" href="css/login_register.css" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+<meta charset="utf-8">
+<title>PET'S HOUSE</title>
+</head>
+
+<body >
+<script>
+        window.onload = function () {
+			createproduct();
+            creatadmin();
+            kiemtradangnhaphaychua();
+            chensotrang();
+            chuyentrang();
+        }
+    </script>
+<div>
+  <div class="phandau"> <a href="index.html"><img src="img/logo.jpg" alt="logo" /></a>
+    <p>Welcome to PET'S HOUSE</p>
+    <ul>
+    </ul>
+    <div style="width: 100% ;color: white;text-align: center;padding-top: 10px;">Tìm kiếm
+      <input type="text" id="timkiemnha" placeholder="Tìm kiếm"/>
+      <button class="searchthoi" onClick="search();"><i class="fas fa-search"></i></button>
+    </div>
+  </div>
+  <div style="position: relative;">
+    <ul class="taskbar">
+      <li class="trangchu"><a href="#" onclick="hientrangchu();">Trang Chủ</a></li>
+      <li class="Doge" onClick="chondog(this);" id="dog"> <a href="#doge">Doge</a></li>
+      <li class="Cate" onClick="choncat(this);" id="cat"> <a href="#cate">Cate</a></li>
+      <li class="chungtoi" onclick="mo1();"><a href="#">Chúng tôi</a></li>
+    </ul>
+    <div class="select" id="selectdoge" onMouseOut="closedoge();" onMouseOver="clickdoge();"></div>
+    <div class="select" id="selectcate" onMouseOut="closecate();" onMouseOver="clickcate();"></div>
+    <div id="banner">
+      <div class="slideshow-container" >
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="img/chonen.jpg" style="width:100%">
+          <div class="text">Caption Text</div>
+        </div>
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="img/chomeo.jpg" style="width:100%">
+          <div class="text">Caption Two</div>
+        </div>
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="img/meonen.jpg" style="width:100%">
+          <div class="text">Caption Three</div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a> <a class="next" onclick="plusSlides(1)">&#10095;</a> </div>
+      <br>
+      <script>
+                var slideIndex = 1;
+                showSlides(slideIndex);
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                }
+
+                function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                    var i;
+                    var slides = document.getElementsByClassName("mySlides");
+                    var dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) { slideIndex = 1 }
+                    if (n < 1) { slideIndex = slides.length }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                    dots[slideIndex - 1].className += " active";
+                }
+            </script> 
+    </div>
+  </div>
+  <div style="clear: both;"></div>
+  <div>
+    <div>
+      <div class="main-nav">
+        <div id="register">
+          <form onsubmit="return ktdk();" style="border: black 2px solid;border-radius: 10px;height: 100%;background-color:  antiquewhite;"
+                            method="post">
+            <div id="dangky-header">
+              <button type="button" onclick="dong()"
+                                    style="width: 30px;border-radius: 7px;">X</button>
+              <p> ĐĂNG KÝ </p>
+            </div>
+            <div id="dangky-mid">
+              <div class="dangky-bentrai">
+                <p>Họ và tên</p>
+                <p>Tên đăng nhập</p>
+                <p>Mật khẩu</p>
+                <p>Email</p>
+              </div>
+              <div class="dangky-benphai">
+                <div class="khungdangky">
+                  <input type="text" id="hovaten" placeholder="Họ và tên" name="hovaten" value=""
+                                            maxlength="50">
+                </div>
+                <div class="khungdangky">
+                  <input type="text" id="tendangnhap" placeholder="Tên đăng nhập"
+                                            name="tendangnhap" value="">
+                </div>
+                <div class="khungdangky">
+                  <input type="password" id="password" placeholder="Mật khẩu" name="password"
+                                            value="">
+                </div>
+                <div class="khungdangky">
+                  <input type="email" id="email" placeholder="Email" name="email" value="" required>
+                </div>
+              </div>
+            </div>
+            <div style="clear:both"></div>
+            <div id="dangky-footer">
+              <input type="submit" value="Đăng ký" style="width: 80px;border-radius: 7px;"/>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="main-nav">
+        <div id="login">
+          <form onsubmit="return ktdn();"
+                            style="border: black 2px solid;border-radius: 10px;height: 100%;background-color:  antiquewhite;"
+                            method="post">
+            <div id="dangnhap-header">
+              <button type="button" onclick="dong2()"
+                                    style="width: 30px;border-radius: 7px;">X</button>
+              <p> ĐĂNG NHẬP </p>
+            </div>
+            <div id="dangnhap-mid">
+              <div class="dangnhap-bentrai">
+                <p>Tên đăng nhập</p>
+                <p>Mật khẩu</p>
+              </div>
+              <div class="dangnhap-benphai">
+                <div class="khungdangnhap">
+                  <input type="text" id="tendangnhap1" placeholder="Tên đăng nhập"
+                                            name="tendangnhap">
+                </div>
+                <div class="khungdangnhap">
+                  <input type="password" id="password1" placeholder="Mật khẩu" name="password">
+                </div>
+              </div>
+            </div>
+            <div style="clear:both"></div>
+            <div id="dangnhap-footer">
+              <input type="submit" value="Đăng nhập" style="width: 100px;border-radius: 7px;">
+            </div>
+          </form>
+        </div>
+      </div>
+      <ul>
+        <div id="chungtoi">
+          <button type="button" onclick="dong1()"
+                                    style="width: 30px;border-radius: 7px;float: right;margin-right: 10px;margin-top: 10px;">X</button>
+          <p> <strong style="font-size: 20px; border-bottom: 2px solid black;"><i class="fas fa-paw"></i>FOLLOW US<i class="fas fa-paw"></i> </strong> <br>
+            <br>
+            <br>
+            <strong style="font-size: 16.5px;"> Bạn đang tìm địa chỉ mua bán chó mèo về làm thú cưng nhưng không biết ở đâu uy tín và chuyện
+            nghiệp? Giữa thị trường vàng thau lẫn lộn, việc tìm mua chó mèo thuần chủng, khỏe mạnh và có
+            nguồn gốc rõ ràng khiến bạn gặp nhiều khó khăn? Vậy còn chần chờ gì nữa mà bạn không đến với
+            PET'S HOUSE– Địa chỉ mua bán thú cưng uy tín và chất lượng nhất hiện nay? </strong> <br>
+            <br>
+            <strong> Tại sao nên chọn mua chó, mèo ở PET'S HOUSE?</strong> <br>
+            Từ lâu, PET'S HOUSE đã được biết đến là một trong những shop bán chó mèo hàng đầu Việt Nam
+            với nhiều ưu điểm vượt trội như: <br>
+            <br>
+            <strong>Các chủng loại chó, mèo đa dạng</strong> <br>
+            Tại Shop chó mèo PET'S HOUSE có một số lượng lớn các em pets rất phong phú, đáp ứng nhu cầu
+            đa dạng của nhiều đối tượng khách hàng khác nhau. Bạn có thể dễ dàng sở hữu một chú chó
+            Golden, Alaska tinh nghịch hay mèo Etoxic, mèo Nga, mèo Anh lông ngắn đáng yêu… khi đến
+            PET'S HOUSE. <br>
+            <br>
+            <strong>Có đầy đủ giấy tờ chứng minh nguồn gốc thú cưng</strong> <br>
+            Khi mua thú cưng tại PET'S HOUSE bạn không cần phải lo lắng về nguồn gốc, xuất xứ của vật
+            nuôi cho dù là chúng được nhập từ nước ngoài về hay nhân giống trong nước. Các giấy tờ liên
+            quan đến thú cưng sẽ được PET'S HOUSE cung cấp đầy đủ để bạn yên tâm chăm sóc cho pets nhà
+            mình. <br>
+            <br>
+            <strong>Quy trình làm việc chuyên nghiệp</strong> <br>
+            Đến với PET'S HOUSE, bạn sẽ được phục vụ tận tình và nhanh nhất. Chúng tôi có một đôi ngũ
+            nhân viên chuyên nghiệp, sẵn sàng tư vấn, trợ giúp khách hàng 24/24. <br>
+            <br>
+            <strong>Quyền lợi khi mua chó, mèo tại PET'S HOUSE</strong> <br>
+          <ol>
+            <i>Chế độ bảo hành hấp dẫn: PET'S HOUSE bảo hành toàn diện 45 ngày đối với tất cả các loại bệnh của thú cưng.</i> <br>
+            <i>Miễn phí vận chuyển trên toàn quốc ở chặng 1 và chịu trách nhiệm hoàn toàn trong quá trình vận chuyển.</i> <br>
+            <i>Tất cả thú cưng đều được tẩy giun, tiêm phòng đầy đủ, có sổ khám bệnh và Microchip theo dõi trước khi trao đến tay người mua.</i> <br>
+            <i>Tặng phụ kiện dành riêng cho từng loại thú cưng. Nếu khách hàng mua thêm phụ kiện sẽ được giảm 10%.</i> <br>
+            <i>Tặng Vocher giảm giá 10% cho các dịch vụ khác tại PET'S HOUSE.</i> <br>
+            <i>Hướng dẫn chăm sóc thú cưng theo đúng quy trình.Khách hàng chỉ cần thanh toán 90% chi phí khi nhận thú cưng, 10% còn lại sẽ được chuyển sau 1 tháng khi khách hoàn toàn hài lòng.</i>
+          </ol>
+          <br>
+          <br>
+          <strong style="margin-left: 1%;">Cam kết cho khách hàng</strong> <br>
+          <ol>
+            <i>Phục vụ tận tình và hỗ trợ khách hàng hết mình trong việc chăm sóc thú cưng.</i> <br>
+            <i>Tất cả thú cưng đều có nguồn gốc rõ ràng. Nếu không đúng, PET'S HOUSE sẽ chịu trách nhiệm bồi thường 100% cho khách.</i> <br>
+            <i>Mọi ưu đãi đều được áp dụng với tất cả khách hàng theo quy định của PET'S HOUSE.</i>
+          </ol>
+          </p>
+        </div>
+      </ul>
+    </div>
+    <div>
+      <ul class="congcu">
+        <li style="color:aliceblue"></li>
+        <li style="display: inline-table"><a href="admin.html"><i class="fas fa-cog" style="color: aliceblue;display: none;" id="nutmoadmin"></i></a></li>
+        <li><a id="tenkhachhang" style="display: none"></a></li>
+        <li><a href="#" id="logout" style="display: none" onClick="dangxuat();">Log out</a></li>
+        <li onclick="mo();" id="dangky11"><a href="#">Đăng ký</a></li>
+        <li onclick="mo2();" id="dangnhap11"><a href="#">Đăng nhập</a></li>
+        <li class="giohang" onclick="hiengiohang(this);"><a href="#"><i
+                                class="fas fa-shopping-cart"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="content" id="content" style="display: none; text-align: center;;"></div>
+<div id="sanphambanchay">
+  <div class="content" id="khung2">
+    <h2>NHỮNG NGƯỜI BẠN ĐƯỢC YÊU THÍCH NHẤT</h2>
+    <script>
+				var demso=1;
+                for (var i = 0; i < 2; i++) {
+                    for (var j = 0; j < 4; j++) {
+                        document.write("<div class='khung' id='khung1000"+demso+"' ></div>");
+						demso++;
+                    }
+                    document.write("<div style='clear:both'></div>");
+                }
+				var arrtheloai=JSON.parse(localStorage.getItem('product'));
+                var k=1;
+				for(i=0;i<arrtheloai.length;i++){
+						var imga='<img src="'+arrtheloai[i].img+'" class="hinh"><div class="tensanpham">'+arrtheloai[i].name+'</div><div class="tengia">giá: '+arrtheloai[i].price+'</div><input type="button" value="Chi tiết" id="'+arrtheloai[i].idnumber+'8899" onclick="button_chitietsanpham(this)"/>';
+						document.getElementById('khung1000'+k).innerHTML=imga;	
+						k++;
+					if(i==7) break;
+				}
+                
+            </script> 
+  </div>
+</div>
+<div id="divsotrang" style="text-align: center"></div>
+<div id="divsotrang2" style="margin-top: 5px; display: none; text-align: center"></div>
+<div class="phancuoi">
+  <div class="noidungfooter">
+    <ul class="information">
+      <li><i class="fas fa-map-marker-alt small-icon" style="margin-left: 50px;"> Địa chỉ:94/9A Hoàng Hoa
+        Thám,Phường 7,Quận Bình Thạnh,Thành phố Hồ Chí Minh </i> </li>
+      <li><i class="fas fa-envelope" style="margin-left: 50px;"> Hotline:0393981372</i></li>
+      <li><i class="fas fa-phone small-icon" style="margin-left: 50px;margin-bottom: 40px;"> Email:nhom1@gmail.com</i></li>
+    </ul>
+    <ul class="social-icon">
+      <li><a href="https://shopee.vn/search?keyword=%C3%A1o%20gile%20n%E1%BB%AF&page=1"><i
+                            class="fab fa-facebook" style="margin-left: 50px;"></i></a>
+      <li>
+      <li><a
+                        href="https://tiki.vn/?utm_source=google&utm_medium=cpc&gclid=CjwKCAiAiuTfBRAaEiwA4itUqGp0ycG7-FZfUZELSHzU7tUzAnBOOFmwSPsSf0dwa31ABR2HyBoVmRoCJh0QAvD_BwE"><i
+                            class="fab fa-instagram" style="color:darksalmon;margin-left: 10px;"></i></a></li>
+      <li><i class="fab fa-youtube" style="margin-left:10px;color: red;"></i></li>
+    </ul>
+  </div>
+</div>
+<div class="copyright">
+  <footer> CopyRight &copy; 2020 by PET'S HOUSE </footer>
+</div>
+<div id="myModal" class="modal" style="display: none;">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title">Giỏ Hàng</h5>
+      <span class="close" onclick="closegiohang();">&times;</span> </div>
+    <div class="modal-body">
+      <div class="cart-row"> <span class="cart-item cart-header cart-column">Sản Phẩm</span> <span class="cart-price cart-header cart-column">Giá</span> <span class="cart-quantity cart-header cart-column">Số Lượng</span> </div>
+      <div id="items">
+        <div class="cart-items"> <span class="cart-item cart-header cart-column" id="loai1">Mèo anh lông ngắn xám</span> <span class="cart-price cart-header cart-column">50000000</span>
+          <input type="number" value="1" class="cart-quantity cart-header cart-column">
+        </div>
+      </div>
+      <div class="cart-total"> <strong class="cart-total-title">Tổng Cộng:</strong> <span class="cart-total-price" id="sumprice">0VNĐ</span> </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary close-footer" onclick="closegiohang();">Đóng</button>
+      <button type="button" class="btn btn-primary order" onclick="thanhtoangiohang();">Thanh Toán</button>
+    </div>
+  </div>
+</div>
+<div class="khungchitietsp" id="khung-chitietsanpham1" style="display: none" >
+  <div  id="khung-chitietsanpham">
+    <button type="button" onclick="dongkhungchitietsanpham()"
+					style="width: 30px;border-radius: 7px;">X</button>
+    <div class="khungbentrai" id="khungchitietbentrai"> </div>
+    <div class="khungbenphai">
+      <div><strong>ID</strong>
+        <input type="text" value="" id="chitietid" readonly>
+      </div>
+      <div><strong>Tên sản phẩm </strong>
+        <input type="text value" value="" id="chitietten" readonly>
+      </div>
+      <div><strong>Giá</strong>
+        <input type="text" id="chitietgia" readonly>
+      </div>
+      <div><strong>Loại</strong>
+        <input type="text" id="chitietloai" readonly>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

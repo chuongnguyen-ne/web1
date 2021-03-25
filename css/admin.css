@@ -1,0 +1,317 @@
+#menuadmin button{
+  width: 100%;
+  height: 40px;
+}
+#adminuser{
+  background: blanchedalmond;
+  margin-top: 275px;
+  width: 110%;
+  height: 40px;
+  border: #000000 solid 1px;
+  margin-left: -40px;
+  text-align: center;
+  position: relative;
+}
+#adminuser p{
+  margin-top: 10px;
+}
+
+
+#adminproduct button :hover{
+  color: rgb(167, 71, 167);
+  
+}
+#admindonhang button :hover{
+  color:  rgb(167, 71, 167);
+}
+.addproduct{
+  color:  rgb(167, 71, 167);
+}
+
+#adminproduct{
+  background: blanchedalmond;
+  margin-top: 50px;
+  width: 110%;
+  height: 40px;
+  border: #000000 solid 1px;
+  margin-left: -40px;
+  position: relative;
+  cursor: pointer;
+}
+#admindonhang{
+  background: blanchedalmond;
+  margin-top: 50px;
+  width: 110%;
+  height: 40px;
+  border: #000000 solid 1px;
+  margin-left: -40px;
+  position: relative;
+}
+
+.left{
+  float: left;
+  width: 30%;
+  background-color: rgb(126, 122, 111);
+  height: 100%;
+}
+.right{
+  float: left;
+  width: 69.85%;
+  background-color: rgb(126, 122, 111);
+  height: 100%;
+  border-left: 2px black solid;
+  position: relative;
+  
+}
+.ngoai{
+  border: solid 1px;
+  height: 850px;
+  width: 100%;
+  border-right:2px black solid;
+  border-top:2px black solid;
+  border-bottom:2px black solid;
+  border-left:2px black solid;
+  position: relative;
+
+}
+.admin-taikhoan{
+  width: 95%;
+  height: 80%;
+  background-color: rgb(255, 202, 68);
+  margin-top: 20px;
+  margin-left: 25px;
+  border: 2px black solid;
+  position: relative;
+  display: none;
+  overflow: scroll;
+}
+.admin-taikhoan ul{
+  display: inline-table;
+  font-size: 20px;
+  font-weight: 2em;
+  font-style: normal;
+  font-family: 'Times New Roman', Times, serif;
+  margin-left: -20px;
+  position: relative;
+
+}
+.admin-taikhoan p{
+  font-size: 13px;
+  margin-top: 50px;
+  position: relative;
+}
+.admin-hovaten{
+  width: 15%;
+  height:100%;
+  text-align: center;
+  position: relative;
+  
+ 
+}
+.admin-tendangnhap{
+  width: 15%;
+  height: 100%;
+  text-align: center;
+  position: relative;
+}
+.admin-matkhau{
+  text-align: center;
+  width: 10%;
+  height: 100%;
+  position: relative;
+}
+.admin-sanpham{
+  text-align: center;
+  width: 17% ;
+  height: 100%;
+  position: relative;
+}
+.admin-xoa{
+  width: 5%;
+  height: 100%;
+  position: relative;
+
+}
+.admin-blockacc{
+  text-align: center;
+  width: 10%;
+  height: 100%;
+  position: relative;
+}
+.admin-trangsanpham{
+  width: 95%;
+  height: 80%;
+  background-color: rgb(255, 202, 68);
+  margin-top: 20px;
+  margin-left: 25px;
+  border: 2px black solid;
+  position: relative;
+  overflow-x: scroll;
+  overflow-y: scroll;
+}
+.admin-trangsanpham ul{
+  display: inline-table;
+  font-size: 20px;
+  font-weight: 2em;
+  font-style: normal;
+  font-family: 'Times New Roman', Times, serif;
+  margin-left: 30px;
+  position: relative;
+  margin-top: 20px;
+ 
+}
+.admin-trangsanpham p{
+  font-size: 13px;
+  margin-top: 60px;
+  position: relative;
+  overflow: auto;
+  
+  
+
+}
+
+.admin-masanpham{
+  width: 15%;
+  height:100%;
+  text-align: center;
+  position: relative;
+  
+ 
+}
+.admin-tensanpham{
+  width: 15%;
+  height: 100%;
+  text-align: center;
+  position: relative;
+  
+}
+
+.admin-gia{
+  text-align: center;
+  width: 10%;
+  height: 100%;
+  position: relative;
+}
+.admin-soluong{
+  width: 15%;
+  height:100%;
+  text-align: center;
+  position: relative;
+  
+}
+
+.admin-trangsanpham .admin-buttonxoa{
+  width: 5%;
+  height:100%;
+  text-align: center;
+  position: relative;
+  line-height: 151%;
+}
+
+.addproduct{
+  width: 95%;
+  height: 80%;
+  background-color: rgb(255, 202, 68);
+  margin-top: 20px;
+  margin-left: 25px;
+  border: 2px black solid;
+  position: relative;
+  line-height: 40px;
+}
+.addproduct p{
+  font-family: 'Times New Roman', Times, serif;
+  margin-left: 100px;
+  font-size: 15px;
+}
+
+.addproduct input[type=text],input[type=number],input[type=file]
+{
+  margin-left: 90px;
+}
+.addproduct input[type=text],input[type=number]{
+  width: 20%;
+  height: 5%;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 17px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.suasanpham{
+	background: #fc4175;
+	height: 270px;
+	width: 50%;
+	border: 2px solid #000000;
+	border-radius: 5px;
+	z-index: 1;
+   	position: fixed;
+    left: 550px;
+    top: 200px;
+}
+.suthaydoi{
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.4);
+}
